@@ -1,5 +1,7 @@
 # Distant-Horizons-To-Voxy
 
+<img width="2560" height="640" alt="GitHub banner@2x" src="https://github.com/user-attachments/assets/9d74f0e7-202a-4f12-9f2a-60a92b16994a" />
+
 Convert Distant Horizons LOD data into a format Voxy can import, fully client-side.
 
 Voxy has a built-in importer (`/voxy import distant_horizons <path>`), but out of the box it
