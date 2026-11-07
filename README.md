@@ -83,6 +83,22 @@ python dh_zstd_to_xz.py "<path>\DistantHorizons_v1.sqlite"
 
 It writes `DistantHorizons_v1_xz.sqlite` next to the input.
 
+## Process Times
+
+These are measured runs on a 12-thread desktop CPU with an SSD. Each script picks its
+process count from the machine's thread count. Times scale roughly with the number of
+full-detail rows and with how many cores you have.
+
+| Script | Input | Processes | Rows | Time |
+|---|---|---|---|---|
+| `dh_v2_to_v1.py` | Overworld, 459 MB database | 11 (threads − 1) | 7,214 | ~7.5 min (447–452 s) |
+| `dh_v2_to_v1.py` (XZ output) | End, 31 MB database | 11 (threads − 1) | 3,680 | ~1.7 min (103 s) |
+| `dh_verify_v1.py` | Converted overworld | 6 (half the threads) | 7,214 | ~4.5 min (267 s) |
+| `dh_zstd_to_xz.py` | Converted overworld | 6 (half the threads) | 7,214 | ~3.5 min (209 s) |
+
+For comparison, an early single-process version of the converter managed about 4.7 rows/s.
+That would be roughly 25 minutes for the same overworld file.
+
 ## Warnings
 
 - **Don't just change the version number.** Running
