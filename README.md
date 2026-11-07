@@ -19,6 +19,8 @@ doesn't work with current Distant Horizons databases:
    `ZSTD EXCEPTION: Unknown frame descriptor`. Its XZ path works.
    → The converter writes XZ (`CompressionMode = 3`) by default.
 
+<img width="1760" height="2240" alt="Process graphic@2x" src="https://github.com/user-attachments/assets/476eca6f-3e81-420c-bb93-543d62d01cc1" />
+
 ## Requirements
 
 - Python 3.10+
